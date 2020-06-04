@@ -5,7 +5,7 @@ class Home  {
   state = {
     books: [],
     q: "",
-    message: "Search For A Book To Begin!"
+    message: "Search"
   };
 
   handleInputChange = event => {
@@ -25,7 +25,7 @@ class Home  {
       .catch(() =>
         this.setState({
           books: [],
-          message: "No New Books Found, Try a Different Query"
+          message: "No books detected"
         })
       );
   };
